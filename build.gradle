@@ -1,0 +1,9 @@
+task buildApplication(type: GradleBuild) {
+    group 'application'
+    setTasks([':client:compile', ':server:bootJar'])
+}
+
+task compileClient(type: GradleBuild) {
+	group 'application'
+    setTasks([':client:compile'])
+}

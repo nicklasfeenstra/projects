@@ -15,8 +15,7 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
     testCompile 'junit:junit:4.12'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'org.springframework.boot:spring-boot-devtools'
 }
 
-bootJar {
-    mainClassName = 'com.example.server.ServerApplication'
-}
+jar.dependsOn ':client:compile'

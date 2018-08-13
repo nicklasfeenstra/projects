@@ -19,7 +19,7 @@ public class MessageControllerTest {
 
 	@Test
 	public void exampleTest() {
-		this.webClient.get().uri("/hello").exchange().expectStatus().isOk()
+		this.webClient.get().uri("/message").exchange().expectStatus().isOk()
 				.expectBody(Message.class).isEqualTo(new Message("Hello World!"));
 	}
 }
