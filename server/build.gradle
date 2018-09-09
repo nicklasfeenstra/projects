@@ -18,4 +18,4 @@ dependencies {
     testCompile 'org.springframework.boot:spring-boot-devtools'
 }
 
-jar.dependsOn ':client:compile'
+bootJar.dependsOn ':client:compile'

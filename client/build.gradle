@@ -13,7 +13,19 @@ node {
 }
 
 task compile(type: NpmTask, dependsOn: npmInstall) {
-    group 'build client'
+    group 'compile client'
     description = 'Compile client side code'
     args = ['run', 'compile']
+}
+
+task serve(type: NpmTask, dependsOn: npmInstall) {
+	group 'serve client'
+    description = 'Serve client side code'
+    args = ['run', 'serve']
+}
+
+task build(type: NpmTask, dependsOn: npmInstall) {
+    group 'build client'
+    description = 'Build client side code with watch'
+    args = ['run', 'build']
 }
